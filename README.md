@@ -2,7 +2,7 @@
 
 An interactive Excel dashboard that tracks the sales performance of **142 sales executives across 8 regions**. It shows Top 5 / Bottom 5 performers, target achievement and gap-to-target, and lets the user choose which dashboard section updates when a region is selected.
 
-<img width="620" height="600" alt="dashboard" src="https://github.com/user-attachments/assets/fb67ddfe-a7f0-495f-9590-0e1ab291fc02" />
+<img width="620" height="380" alt="dashboard" src="https://github.com/user-attachments/assets/fb67ddfe-a7f0-495f-9590-0e1ab291fc02" />
 
 ---
 
