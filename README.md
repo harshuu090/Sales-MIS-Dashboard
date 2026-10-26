@@ -221,8 +221,6 @@ The Excel workbook contains the dashboard and raw data worksheets. The additiona
 
 Aspiring Data Analyst | Excel | SQL | Power BI
 
-[![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?style=for-the-badge&logo=github)](https://github.com/harshuu090)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/harsh-kushwah-9346902a4/)
 
 📧 **Email:** harshuu9752@gmail.com
 
