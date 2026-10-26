@@ -1,134 +1,239 @@
-# Sales Performance MIS Dashboard (Excel + VBA)
+<div align="center">
 
-An interactive Excel dashboard that tracks the sales performance of **142 sales executives across 8 regions**. It shows Top 5 / Bottom 5 performers, target achievement and gap-to-target, and lets the user choose which dashboard section updates when a region is selected.
+# 📊 Sales Performance MIS Dashboard
 
-<img width="620" height="380" alt="dashboard" src="https://github.com/user-attachments/assets/fb67ddfe-a7f0-495f-9590-0e1ab291fc02" />
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&pause=1000&color=36BCF7&center=true&vCenter=true&width=700&lines=Interactive+Sales+MIS+Dashboard;Built+with+Excel+%26+VBA;Track+Performance+%7C+Analyze+Targets;Turning+Sales+Data+into+Insights" alt="Animated Typing SVG" />
+
+**An interactive Excel dashboard to analyze sales performance across 8 regions and 142 sales executives.**
+
+<br/>
+
+![Excel](https://img.shields.io/badge/Microsoft-Excel-217346?style=for-the-badge&logo=microsoft-excel&logoColor=white)
+![VBA](https://img.shields.io/badge/Automation-VBA-blue?style=for-the-badge)
+![Dashboard](https://img.shields.io/badge/Project-MIS%20Dashboard-orange?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Completed-success?style=for-the-badge)
+
+</div>
 
 ---
 
-## Problem Statement
+## 📸 Dashboard Preview
 
-Management needs to quickly see:
-- Which sales executives are performing best and worst
-- How close each executive is to the monthly target
-- How each region is performing
+<div align="center">
 
-Doing this manually from raw data is slow and error-prone. This dashboard gives the answers in one click.
+<img src="https://github.com/user-attachments/assets/fb67ddfe-a7f0-495f-9590-0e1ab291fc02" alt="Sales Performance MIS Dashboard" width="90%"/>
+
+</div>
 
 ---
 
-## Dataset
+## 🎯 Project Overview
 
-| Item | Details |
+This project focuses on analyzing sales performance using **Microsoft Excel, Pivot Tables, Pivot Charts, Slicers, Form Controls, and VBA macros**.
+
+The dashboard helps management quickly identify top and bottom performers, monitor target achievement, and compare regional sales performance. Its selective filtering functionality allows users to update a chosen dashboard section without changing the others.
+
+## ❗ Problem Statement
+
+Analyzing sales performance manually can be time-consuming and error-prone. Management needs a simple way to:
+
+- Identify the top and bottom sales executives.
+- Track sales against a target of 500 units per executive.
+- Calculate target achievement and the remaining target gap.
+- Compare performance across different regions.
+- Filter individual dashboard sections independently.
+
+**Solution:** An interactive Excel MIS dashboard with region-based filtering and VBA-powered control over Pivot Table connections.
+
+---
+
+## 📁 Dataset Overview
+
+| Metric | Details |
 |---|---|
-| Records | 142 sales executives |
-| Regions | Chennai, Delhi, Mumbai, Nagpur, Patna, Pune, Ranchi, Surat |
-| Period | 5 days of sales (Day1 to Day5) |
-| Target | 500 units per executive |
+| Sales Executives | 142 |
+| Regions | 8 |
+| Sales Period | 5 days |
+| Individual Target | 500 units |
+| Data Source | Excel workbook |
+| Main Worksheet | `RAW DATA` |
+| Dashboard Worksheet | `DASHBOARD` |
 
-**Columns:** Emp Code, Sales Executive, Region, Day1, Day2, Day3, Day4, Day5, Total Sales, Target, Target Hit %, Away From Target %
+### 🌍 Regions Covered
 
----
+`Chennai` · `Delhi` · `Mumbai` · `Nagpur` · `Patna` · `Pune` · `Ranchi` · `Surat`
 
-## Calculated Columns
+### 📋 Dataset Columns
 
-| Column | Formula |
-|---|---|
-| Total Sales | `=SUM(D2:H2)` |
-| Target Hit % | `=I2/J2` |
-| Away From Target % | `=1-K2` |
-
----
-
-## Dashboard Features
-
-- **Region Slicer:** 8 region buttons to filter the data
-- **4 Pivot Table sections** (Top 5 and Bottom 5 by Total Sales, Target Hit %, Away From Target %)
-- **3 Pivot Charts:** bar chart, pie chart, line chart
-- **Selective filtering:** 4 checkboxes (Dashboard 1 to 4). Tick a checkbox, then click a region, and only that dashboard section updates. The others stay unchanged.
+`Emp Code` · `Sales Executive` · `Region` · `Day1` · `Day2` · `Day3` · `Day4` · `Day5` · `Total Sales` · `Target` · `Target Hit %` · `Away From Target %`
 
 ---
 
-## How to Use
+## 🧮 Calculated Columns
 
-1. Tick the checkbox of the dashboard section you want to update (Dashboard 1 / 2 / 3 / 4).
-2. Click a region button (for example, Mumbai).
-3. The tables and charts of the selected section update for that region.
-4. Untick the checkbox to stop that section from responding to the slicer.
+| Metric | Excel Formula | Purpose |
+|---|---|---|
+| Total Sales | `=SUM(D2:H2)` | Calculates total sales over five days |
+| Target Hit % | `=I2/J2` | Measures target achievement |
+| Away From Target % | `=1-K2` | Measures the percentage remaining to target |
+
+*Format the percentage columns as Percentage in Excel.*
 
 ---
 
-## How the Selective Filter Works (VBA)
+## ✨ Key Features
 
-A normal slicer filters all connected pivot tables at once. To control this, each checkbox is linked to a cell (Cell Link), which becomes `TRUE` when ticked and `FALSE` when unticked. A macro reads that cell and connects or disconnects the Region slicer from the matching pivot table.
+### 🏆 Top & Bottom Performers
+Identify the top 5 and bottom 5 sales executives using sales and target-related performance metrics.
+
+### 🎯 Target Achievement Analysis
+Compare actual sales with the target of 500 units and evaluate target achievement and the remaining gap.
+
+### 🌎 Region-Based Filtering
+Use region buttons to analyze performance for Chennai, Delhi, Mumbai, Nagpur, Patna, Pune, Ranchi, and Surat.
+
+### 📊 Interactive Visualizations
+Includes Pivot Charts such as bar, pie, and line charts to present sales information visually.
+
+### ⚙️ Selective Dashboard Filtering
+Four checkboxes control which dashboard sections respond to region selection. The selected section updates while other sections remain unchanged.
+
+### 🤖 VBA Automation
+VBA macros manage connections between the Region slicer and the relevant Pivot Tables based on checkbox-linked cells.
+
+---
+
+## 🔄 How to Use the Dashboard
+
+1. Open `Sales_MIS_Dashboard.xlsm` in Microsoft Excel.
+2. Enable macros/content if prompted and if you trust the workbook.
+3. Tick the checkbox for the dashboard section you want to update.
+4. Select a region using the Region slicer.
+5. Review the updated tables and charts for the selected region.
+6. Select a different checkbox or region to explore other results.
+
+> **Important:** Download the `.xlsm` workbook to use the interactive Excel dashboard. The VBA-powered functionality requires a desktop version of Excel with macros enabled.
+
+---
+
+## 💻 How Selective Filtering Works
+
+A standard slicer can filter all connected Pivot Tables simultaneously. This project uses checkbox-linked cells and VBA to control which Pivot Table is connected to the Region slicer.
 
 ```vba
 Sub SlicerConnection()
 
-    ' Checkbox linked cell A1: TRUE = connect, FALSE = disconnect
+    ' Checkbox linked to cell A1
+    ' TRUE = connect the Pivot Table
+    ' FALSE = disconnect the Pivot Table
+
     If Sheet1.Range("A1").Value = True Then
-        ActiveWorkbook.SlicerCaches("Slicer_Region").PivotTables.AddPivotTable Sheet1.PivotTables("PivotTable1")
+
+        ActiveWorkbook.SlicerCaches("Slicer_Region") _
+            .PivotTables.AddPivotTable Sheet1.PivotTables("PivotTable1")
+
     Else
-        ActiveWorkbook.SlicerCaches("Slicer_Region").PivotTables.RemovePivotTable Sheet1.PivotTables("PivotTable1")
+
+        ActiveWorkbook.SlicerCaches("Slicer_Region") _
+            .PivotTables.RemovePivotTable Sheet1.PivotTables("PivotTable1")
+
     End If
 
 End Sub
 ```
 
-The same logic is repeated for the other dashboard sections with their own linked cell and pivot table.
+The same approach is applied to the other dashboard sections using their respective checkbox-linked cells and Pivot Tables.
+
+*Note: The example illustrates the connection logic. The slicer cache name, worksheet reference, and Pivot Table names must match the actual workbook.*
 
 ---
 
-## Tools and Skills Used
+## 🛠️ Tools & Technologies
 
-- Microsoft Excel (Formulas, Pivot Tables, Pivot Charts)
-- Slicers and Slicer Caches
-- Form Controls (Checkboxes, Cell Link)
-- VBA (Macros, If...Else, SlicerCaches, PivotTables objects)
-- Conditional logic and dashboard design
+<div align="center">
+
+![Microsoft Excel](https://img.shields.io/badge/Microsoft%20Excel-217346?style=flat-square&logo=microsoft-excel&logoColor=white)
+![VBA](https://img.shields.io/badge/VBA-Automation-blue?style=flat-square)
+![Pivot Tables](https://img.shields.io/badge/Pivot-Tables-orange?style=flat-square)
+![Pivot Charts](https://img.shields.io/badge/Pivot-Charts-purple?style=flat-square)
+![Data Analysis](https://img.shields.io/badge/Data-Analysis-informational?style=flat-square)
+
+</div>
+
+- **Microsoft Excel:** Data analysis and dashboard development
+- **Excel Formulas:** KPI and target calculations
+- **Pivot Tables:** Summarization and performance ranking
+- **Pivot Charts:** Visual representation of sales data
+- **Slicers:** Interactive region selection
+- **Form Controls:** Checkbox-based dashboard selection
+- **VBA:** Automation of slicer connections
 
 ---
 
-## Project Structure
+## 📂 Project Structure
 
-```
+```text
 Sales-MIS-Dashboard/
-|-- Sales_MIS_Dashboard.xlsm      (main file: Sheet1 = DASHBOARD)
-|-- screenshots/
-|   |-- dashboard.png             (full dashboard view)
-|   |-- dashboard_region.png      (dashboard after selecting a region)
-|-- vba/
-|   |-- SlicerConnection.bas      (exported VBA macro code)
-|-- data/
-|   |-- raw_data.csv              (RAW DATA sheet)
-|-- README.md
+│
+├── Sales_MIS_Dashboard.xlsm
+├── README.md
+│
+├── screenshots/
+│   ├── dashboard.png
+│   └── dashboard_region.png
+│
+├── vba/
+│   └── SlicerConnection.bas
+│
+└── data/
+    └── raw_data.csv
 ```
 
-The dashboard and the raw data live in **one Excel workbook** (two sheets). The `vba`, `screenshots` and `data` folders are only for easy viewing on GitHub.
-
-> Note: Download the **.xlsm** file and click **Enable Content** when Excel asks, otherwise the macros and checkboxes will not work.
+The Excel workbook contains the dashboard and raw data worksheets. The additional folders organize the screenshots, exported VBA code, and raw dataset for easier review on GitHub.
 
 ---
 
-## Key Learnings
+## 📚 Key Learnings
 
-- Building interactive dashboards with Pivot Tables, Charts and Slicers
-- Controlling slicer connections with VBA
-- Calculating KPIs such as Target Hit % and Gap-to-Target
-- Presenting data so that management can act on it quickly
-
----
-
-## Future Improvements
-
-- Add KPI cards (Total Sales, Average Target Hit %, Total Executives)
-- Add titles to every chart and table
-- Add a Month dimension for trend analysis
-- Rebuild the same dashboard in Power BI
+- Building interactive MIS dashboards in Excel.
+- Using Pivot Tables and Pivot Charts for performance analysis.
+- Calculating target achievement and target gaps.
+- Implementing region-based filtering.
+- Automating Excel dashboard behavior with VBA.
+- Designing dashboards that support management decision-making.
 
 ---
 
-## Author
+## 🚀 Future Improvements
 
-**[Harsh Kushwah]**
-Email: [harshuu9752@gmail.com]
+- Add KPI cards for total sales, average target achievement, and total executives.
+- Improve chart and table titles for easier interpretation.
+- Add monthly sales data for trend analysis.
+- Recreate the dashboard in Power BI.
+
+---
+
+## 👨‍💻 About the Author
+
+<div align="center">
+
+### Harsh Kushwah
+
+Aspiring Data Analyst | Excel | SQL | Power BI
+
+[![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?style=for-the-badge&logo=github)](https://github.com/harshuu090)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/harsh-kushwah-9346902a4/)
+
+📧 **Email:** harshuu9752@gmail.com
+
+</div>
+
+---
+
+<div align="center">
+
+**⭐ If you find this project useful, consider giving the repository a star!**
+
+*Built with Excel, VBA, and a focus on data-driven decision-making.*
+
+</div>
