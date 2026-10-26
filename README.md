@@ -218,10 +218,6 @@ The Excel workbook contains the dashboard and raw data worksheets. The additiona
 <div align="center">
 
 ### Harsh Kushwah
-
-Aspiring Data Analyst | Excel | SQL | Power BI
-
-
 📧 **Email:** harshuu9752@gmail.com
 
 </div>
